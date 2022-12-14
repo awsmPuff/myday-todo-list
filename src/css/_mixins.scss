@@ -1,0 +1,15 @@
+@mixin w-h($width, $height: max-content) {
+    width: $width;
+    height: $height;
+}
+@mixin bgcolor($bg: transparent, $color: inherit) {
+    background-color: $bg;
+    color: $color;
+}
+@mixin flexbox($direction: row, $justify: center, $align: center, $gap: auto) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}

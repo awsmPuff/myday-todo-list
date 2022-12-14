@@ -1,0 +1,60 @@
+.light .end {
+  border-top: solid 2px rgba(0, 0, 0, 0.3);
+}
+.light input[type=text] {
+  border-bottom: solid 2px rgba(0, 0, 0, 0.3);
+}
+.light input[type=text]:focus {
+  border-bottom-color: black;
+}
+
+.dark .end {
+  border-top: solid 2px rgba(255, 250, 241, 0.3);
+}
+.dark input[type=text] {
+  border-bottom: solid 2px rgba(255, 250, 241, 0.3);
+}
+.dark input[type=text]:focus {
+  border-bottom-color: rgb(255, 250, 241);
+}
+
+.TasksList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.TasksList ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.TasksList ul li {
+  cursor: pointer;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}
+.TasksList ul li:hover {
+  opacity: 0.5;
+}
+.TasksList .end {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: auto;
+  padding-top: 0.6rem;
+  width: 100%;
+  font-size: 0.9rem;
+}
+.TasksList .end button {
+  transition: opacity 0.2s ease-in;
+  font-size: 0.9rem;
+}
+.TasksList .end button:hover {
+  opacity: 0.5;
+}/*# sourceMappingURL=TasksList.css.map */

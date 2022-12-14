@@ -1,0 +1,96 @@
+@import 'variables';
+@import 'mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: $myFont;
+}
+  
+html {
+    font-size: $fontBase;
+    font-weight: $fontWeight;
+    @include w-h($width: 100vw, $height: 100vh);
+}
+body {
+    @include w-h($width: 100%, $height: 100%);
+    @include flexbox($align: flex-start);
+    position: relative;
+}
+#root {
+    @include w-h($width: 100%);
+}
+button {
+    cursor: pointer;
+    border: none;
+    @include bgcolor;
+    font-size: 1rem;
+}
+ul {
+    list-style: none;
+}
+input[type=text] {
+    border: none;
+    outline: none;
+    letter-spacing: 0.1rem;
+    font-size: 1.1rem;
+    @include bgcolor;
+}
+h1 {
+    font-size: 2.5rem;
+}
+.light {
+    @include bgcolor($bg: $darkFont, $color: $lightFont);
+    .progress-bar {
+        background-color: $lightFont;
+    }
+}
+.dark {
+    @include bgcolor($bg: $lightFont, $color: $darkFont);
+    .progress-bar {
+        background-color: $darkFont;
+    }
+}
+
+.App {
+    margin: 5rem auto;
+    @include w-h($width: 80%);
+    @include flexbox($direction: column, $gap: 2.5rem);
+    .progress-bar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 1rem;
+    }
+    header {
+        @include flexbox($direction: column, $align: flex-start, $gap: 1rem);
+    }
+    button.toggle {
+        position: absolute;
+        top: 5rem;
+        right: 10%;
+        font-size: 2rem;
+        transition: transform .9s ease-in-out;
+    }
+    button.toggle:hover {
+        transform: rotateY(180deg);
+        opacity: 0.8;
+    }
+    main {
+        @include flexbox($direction: column, $align: flex-start, $gap: 1rem);
+    }
+    blockquote {
+        font-size: 1.3rem;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    html {
+        font-size: 20px;
+    }
+}
+  

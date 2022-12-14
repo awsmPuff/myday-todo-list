@@ -1,0 +1,38 @@
+@import 'variables';
+@import 'mixins';
+
+
+.light {
+    form {
+        button {
+            @include bgcolor($color: $lightFont);
+            border: solid 2px $lightFont;
+        }
+    }
+}
+.dark {
+    form {
+        button {
+            @include bgcolor($color: $darkFont);
+            border: solid 2px $darkFont;
+        }
+    }
+}
+form {
+    width: 100%;
+    @include flexbox($justify: space-between, $align: flex-end);
+    input {
+        width: 80.5%;
+    }
+    button {
+        margin-left: -0.5%;
+        width: 20%;
+        height: 1.5rem;
+        border-radius: 0.1rem;
+        opacity: 0.3;
+        transition: opacity .2s ease-in;
+    }
+    button:hover {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,53 @@
+@import 'variables';
+@import 'mixins';
+
+.light {
+    .end {
+        border-top: solid 2px rgba($lightFont, 0.3);
+    }
+    input[type=text] {
+        border-bottom: solid 2px rgba($lightFont, 0.3);
+    }
+    input[type=text]:focus {
+        border-bottom-color: $lightFont;
+    }
+}
+.dark {
+    .end {
+        border-top: solid 2px rgba($darkFont, 0.3);
+    }
+    input[type=text] {
+        border-bottom: solid 2px rgba($darkFont, 0.3);
+    }
+    input[type=text]:focus {
+        border-bottom-color: $darkFont;
+    }
+}
+.TasksList {
+    width: 100%;
+    @include flexbox($direction: column, $align: flex-start, $gap: 1rem);
+    ul {
+        @include flexbox($direction: column, $align: flex-start, $gap: 0.5rem);
+        li {
+            cursor: pointer;
+            font-size: 1.1rem;
+            text-transform: capitalize;
+        }
+        li:hover {
+            opacity: 0.5;
+        }
+    }
+    .end {
+        @include flexbox($justify: space-between, $align: flex-end);
+        padding-top: .6rem;
+        width: 100%;
+        font-size: .9rem;
+        button {
+            transition: opacity 0.2s ease-in;
+            font-size: .9rem;
+        }
+        button:hover {
+            opacity: 0.5;
+        }
+    }
+}
